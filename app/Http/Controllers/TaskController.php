@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    //
     public function index()
     {
         return Task::all();
@@ -23,7 +22,7 @@ class TaskController extends Controller
         return $task;
     }
 
-    public function update(Requesst $request, Task $task)
+    public function update(Request $request, Task $task)
     {
         $task->update($request->all());
 
