@@ -34,21 +34,22 @@
         props: {
             taskId: String
         },
-        data: function(){
+        data: function () {
             return {
-                task:{}
+                task: {}
             }
         },
-        methods:{
-            getTask(){
+        methods: {
+            getTask() {
                 axios.get('/api/tasks/' + this.taskId)
-                .then((res)=>{
-                    this.task = res.data;
-                });
+                    .then((res) => {
+                        this.task = res.data;
+                    });
             }
         },
-        mouted(){
+        mounted() {
             this.getTask();
         }
     }
+
 </script>
